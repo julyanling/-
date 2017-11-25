@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="" name="description" />
+  <meta content="webthemez" name="author" />
+  <title>个人档案</title>
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+  <!-- Custom Styles-->
+  <link href="assets/css/custom-styles.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="assets/css/font-goole.css" rel='stylesheet' type='text/css' />
+  <link href="assets/css/video-js.css" rel="stylesheet"> 
+  <script src="assets/js/jquery-1.10.2.js"></script>
+  <!-- Bootstrap Js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script> 
+    $(document).ready(function(){
+      $("#center").removeClass("active-menu");
+      $("#file").addClass("active-menu");
+      $('#myModal').modal({
+        keyboard: true
+      })
+
+        $("#sideNav").click(function(){
+        if($(this).hasClass('closed')){
+          $('.navbar-side').animate({left: '0px'});
+          $(this).removeClass('closed');
+          $('#page-wrapper').animate({'margin-left' : '290px'});
+          
+        }
+        else{
+            $(this).addClass('closed');
+          $('.navbar-side').animate({left: '-290px'});
+          $('#page-wrapper').animate({'margin-left' : '0px'}); 
+        }
+      });
+    });
+
+    function openmydoc(path)
+    { 
+    var doc=new ActiveXObject("Word.Application"); 
+    doc.visible=true; 
+    doc.Documents.Open(path); 
+    }  
+
+  </script> 
+</head>
+<body>
+  <div id="wrapper">
+    <div id="slid"></div>
+    <div id="header"></div>
+    <div id="page-wrapper" style=" margin: 0 0 0 290px;">
+        <ol class="breadcrumb">
+          <li><a href="#">个人中心</a></li>
+          <li class="active">我的档案</li>
+          <div class="navbar-right" style="position:relative;bottom:8px;right:10px;">
+            <button class="btn btn-primary" type="submit">修改</button>
+            <button class="btn btn-primary" type="submit">导出资料包</button>
+          </div>
+        </ol>
+
+    <div id="page-inner">
+ <form class="register-form">
+      <div class="col-sm-6 col-xs-12">
+
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">王小明</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">学号</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">1234567894</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-sm-2 control-label" style="padding-right: 0px;padding-left: 0px;">证件照</label>
+            <div class="col-sm-10">
+              <button class="btn btn-default" data-toggle="modal" data-target="#myModal" type="submit" style="margin-bottom: 5px;" onclick="">点击查看</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label" style="padding-right: 0px;padding-left: 0px;">身份证号</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">123456789456123</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sex" class="col-sm-2 control-label">性别</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">男</label>
+            </div>
+          </div>
+       
+          <div class="form-group ">
+            <label for="dtp_input2" class="col-sm-2 control-label ">生日</label>
+            <div class="col-sm-10" style="text-align: left" >
+              <label type="text" class="form-control" id="id_card">1998-01-01</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="typeid" class="col-sm-2 control-label">民族</label>
+            <div class="col-sm-10">
+             <label type="text" class="form-control" id="id_card">汉族</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">籍贯</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">浙江杭州</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="typeid" class="col-sm-2 control-label">学院</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">信息学院</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">班级</label>
+            <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">计科1401</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+                <label for="typeid" class="col-sm-2 control-label">学历</label>
+                <div class="col-sm-10">
+              <label type="text" class="form-control" id="id_card">本科</label>
+            </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-sm-6 col-xs-12">
+          
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label">学位</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">高中</label>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <label for="dtp_input2" class="col-sm-3 control-label " style="padding-right: 0px;padding-left: 0px;">申请入党时间</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">2016-01-01</label>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <label for="dtp_input2" class="col-sm-3 control-label " style="padding-right: 0px;padding-left: 0px;">积极分子确立时间</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">2016-01-01</label>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <label for="dtp_input2" class="col-sm-3 control-label " style="padding-right: 0px;padding-left: 0px;">党校结业时间</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">2016-01-01</label>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <label for="dtp_input2" class="col-sm-3 control-label " style="padding-right: 0px;padding-left: 0px;">发展对象确立时间</label>
+             <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">2016-01-01</label>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <label for="dtp_input2" class="col-sm-3 control-label " style="padding-right: 0px;padding-left: 0px;">预备党员确立时间</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">2016-01-01</label>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <label for="dtp_input2" class="col-sm-3 control-label " style="padding-right: 0px;padding-left: 0px;">转正时间</label>
+             <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">2016-01-01</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+                  <label for="typeid" class="col-sm-3 control-label" style="padding-right: 0px;padding-left: 0px;">所在党支部</label>
+                  <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">第一党支部</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label" style="padding-right: 0px;padding-left: 0px;">手机长号</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">1234567894</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label" style="padding-right: 0px;padding-left: 0px;">手机短号</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">1234567</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label">微信号</label>
+              <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">1234567894</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label" style="padding-right: 0px;padding-left: 0px;">电子邮箱</label>
+             <div class="col-sm-9">
+                <label type="text" class="form-control" id="id_card">123456789@qq.com</label>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+              <label for="username" class="col-sm-1 control-label" style="padding-right: 0px;padding-left: 0px;">个人简历</label>
+             <div class="col-sm-11">
+                <p>我叫xxx，性别男，汉族人，于xx年xx月xx日出生在xx市的一个小家庭。我母亲是一名中国共产党党员，父亲是一名工人，我是在党的教育下成长起来的。母亲谦虚严谨，细致谨慎的工作作风从小就深深地感染着我。我请求党组织批准我成为预备党员。</p>
+               <!--  <a href="file:///G:测试博客文章.doc"  onclick="openmydoc('file:///G:/测试/博客文章.doc');" type="activxobject(word.application)">博客文章 </a>
+ -->
+              </div>
+        </div>
+        
+      </form>
+        
+
+      </div><!--/.pager-inner-->
+
+      <div id="footer"></div>
+
+    </div><!--/.page-wrapper-->
+
+  </div><!--/.wrapper-->
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width:300px;">
+                <div class="modal-body"><img src="assets/img/head.jpg" alt="..." style="width: 150px;height: 150px;" class="img-circle user-image"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+  
+  <!-- Metis Menu Js -->
+  <script src="assets/js/jquery.metisMenu.js"></script>
+  <!-- Custom Js -->
+  <script src="assets/js/custom-scripts.js"></script>
+  
+</body>
+</html>
+<script type="text/javascript" src="assets/js/head/loader.js"></script>
